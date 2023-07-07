@@ -1,0 +1,258 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0 40;
+    padding: 0 40;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+body {
+    background-color: #fbf6ed;
+}
+  
+ .logo img {
+    height: 40px;
+    display: flex;
+    justify-items: flex-start;
+    margin-left: 0 10px;
+  }
+  
+nav {
+    font-family: 'Libre Baskerville', serif;
+    color: #1e1e1e; 
+  }
+  
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+li {
+    margin: 0 15px;
+  }
+
+.seccion1 {
+    min-height: 100vh;
+    margin-bottom: 20px;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.retrato img {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+  
+h1 {
+    font-size: 36px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    text-align: center;
+    color: #1e1e1e;
+}  
+
+h2 {
+    font-size: 28px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    text-align: center;
+    color: #1e1e1e;
+}  
+
+h3 {
+    font-size: 18px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+h4 {
+  font-size: 12px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: white;
+}  
+
+p {
+    font-size: 15px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    color: #4F4F4F;
+}   
+
+.descarga {
+display: flex;
+justify-content: center;
+}
+
+.CV {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #073e99;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    border: none;
+    margin-bottom: 30px;
+  }
+  
+  .CV:hover {
+    background-color: #1e1e1e;
+  }
+
+  #Portafolio {
+    margin-top: 5px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #fb6d58;
+    color: #fbfbfb;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    margin-bottom: 30px;
+  }
+
+#Portafolio:hover {
+    transform: scale(1.1);
+  }
+.seccion2 {
+    min-height: 100vh;
+  }
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria {
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.img-galeria:hover{
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.redes {
+    display: flex;
+    justify-content: center
+}
+
+.iconos img {
+    display: inline-block;
+    width: 20vw; 
+    max-width: 50px; 
+    margin: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #073e99;
+}
+
+i {
+  color:#fff;
+  background: #2263cc;
+  border-radius:5px;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width:60px;
+  height:40px;
+  padding-top:12px;
+  margin:0 3px;
+}
+
+i:hover {
+  background: #87b5ff;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
