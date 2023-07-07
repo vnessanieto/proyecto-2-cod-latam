@@ -36,29 +36,66 @@ a {
 */
 
 main {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
 }
 
 header {
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
     background-color: #fbf6ed;
 }
   
- .logo img {
-    height: 40px;
-    display: flex;
-    justify-items: flex-start;
-    margin-left: 0 10px;
+/* mobile */
+@media (max-width: 390px) {
+section {
+  display: block;
+  flex-direction: column;
   }
-  
+  h1 {
+    font-size: 48px;
+    }
+  h2 {
+    font-size: 32px;
+     }
+  .logo img {
+      margin-left: 0;
+    }
+}
+
+/* tablet */
+  @media (min-width: 768px) {
+    section {
+      flex-direction: column;
+      }
+  p {
+  font-size: 18px;
+  }
+}
+
+/* desktop */
+  @media (min-width: 1024px) {
+  section {
+  flex-direction: column;
+  }
+  h1 {
+    font-size: 48px; 
+  }
+  h2 {
+    font-size: 32px; 
+  }
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
 nav {
     font-family: 'Libre Baskerville', serif;
     color: #1e1e1e; 
@@ -69,17 +106,19 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
 li {
-    margin: 0 15px;
+    margin: 10px 10px;
   }
 
 .seccion1 {
     min-height: 100vh;
     margin-bottom: 20px;
   }
-
+  
   .contenedor {
     display: flex;
     justify-content: center;
@@ -87,16 +126,21 @@ li {
   }
 
 .retrato img {
+    max-width: 100%;
     display: flex;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2px;
-    margin-bottom: 20px;
+    background-image: url('/img/Vanessa-Nieto-ilustracion.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .retrato img {
+    background-image: url(/img/Vanessa-Nieto-ilustracion.png)
+  }
 }
   
 h1 {
-    font-size: 36px;
+    font-size: 48px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     text-align: center;
@@ -104,7 +148,7 @@ h1 {
 }  
 
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     text-align: center;
@@ -132,18 +176,23 @@ p {
     font-size: 15px;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: center;
     color: #4F4F4F;
 }   
+
+.bio {
+  padding: 0px 40px;
+}
 
 .descarga {
 display: flex;
 justify-content: center;
 }
 
-.CV {
-    margin-top: 10px;
+#CV {
+    text-align: center;
+    margin-top: 5px;
     padding: 8px 20px;
     border-radius: 20px;
     background-color: #073e99;
@@ -156,11 +205,12 @@ justify-content: center;
     margin-bottom: 30px;
   }
   
-  .CV:hover {
+#CV:hover {
     background-color: #1e1e1e;
   }
 
   #Portafolio {
+    text-align: center;
     margin-top: 5px;
     padding: 8px 20px;
     border-radius: 20px;
@@ -177,8 +227,11 @@ justify-content: center;
 #Portafolio:hover {
     transform: scale(1.1);
   }
+
 .seccion2 {
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 .contenedor-galeria{
@@ -215,10 +268,26 @@ justify-content: center;
     }
     
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #073e99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #073e99;
+}
+
+#footer {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto a {
+  margin: 10px;
 }
 
 i {
@@ -232,7 +301,7 @@ i {
   width:60px;
   height:40px;
   padding-top:12px;
-  margin:0 3px;
+  margin:0 1px;
 }
 
 i:hover {
